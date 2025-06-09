@@ -1,0 +1,154 @@
+.input-container{
+    margin: auto;
+    text-align: center;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 15px;
+
+    max-width: 500px;
+    min-height:50px ;
+
+    border: solid 1px;
+
+}
+
+.task-text{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 435px;
+    height: 30px;
+    font: normal 14pt arial;
+    text-align: center;
+}
+
+.span{
+    width: 460px;
+}
+
+#add-task {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 11px;
+    font-size: 20pt;
+    width: 50px;
+    height: 30px;
+}
+
+#task-amount{
+    width: 60px;
+    height: 30px;
+    margin-left: 5px;
+    font: bold 10pt Arial;
+    text-align: center;
+}
+
+#add-task{
+    text-align: center;
+}
+
+.task-container{
+    margin: auto;
+    text-align: center;
+    
+    margin-top: 15px;
+
+    max-width: 500px;
+    min-height:50px ;
+
+    font: normal 14pt arial;
+}
+
+.edit {
+    background-color: transparent;
+    border: none;
+    font-size: 15pt;
+}
+
+.delete{
+    background-color: transparent;
+    border: none;
+    font-size: 15pt;
+}
+
+.done {
+    background-color: transparent;
+    border: none;
+    font-size: 15pt;
+}
+
+.task{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0.5px 0.5px 5px;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column; /* Coloca os botões em coluna (vertical) */
+  margin-left: auto;      /* Empurra o grupo para o lado direito */
+  gap: 5px;               /* Espaçamento entre os botões */
+}
+
+.button-group button {
+  margin-left: 5px;
+}
+
+.tempDiv {
+  position: absolute;
+  /* top: 50%; */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  
+  width: 490px;
+  height: 35px;
+}
+
+#task-container{
+    position: relative;
+}
+
+.temp-input{
+    background-color: transparent;
+    border: none;
+    /* outline: none; */
+    width: 420px;
+    height: 30px;
+    font: normal 14pt arial;
+    text-align: left;
+}
+
+.temp-button{
+    background-color: transparent;
+    border: none;
+    font-size: 20pt;
+}
+
+#overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* semi-transparente */
+  backdrop-filter: blur(5px); /* efeito blur */
+  z-index: 999; /* acima do conteúdo normal */
+  display: none; /* começa escondido */
+}

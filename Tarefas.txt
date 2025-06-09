@@ -1,0 +1,67 @@
+Excelente, aprendiz! Agora que você tem a base funcional da sua to-do list, vamos criar um checklist com foco em:
+
+Melhoria visual (UI/UX)
+
+Boas práticas de código
+
+Responsividade
+
+Funcionalidades extras
+
+Preparação para publicar como app ou projeto de portfólio
+
+✅ CHECKLIST DE EVOLUÇÃO DA TO-DO LIST
+🔧 Organização e Código Limpo
+ Separar funções em arquivos (script.js, storage.js, etc.)
+
+ Usar nomes de variáveis mais descritivos (indexToRemove → taskIndex)
+
+ Evitar repetição de código com funções reutilizáveis (ex: updateLocalStorage())
+
+🎨 Aprimoramento Visual
+ Definir uma paleta de cores consistente (ex: verde escuro para “concluído”)
+
+ Adicionar transições suaves (hover, foco, done)
+
+ Usar ícones via biblioteca (ex: Font Awesome ou Material Icons)
+
+ Adicionar fontes personalizadas com Google Fonts
+
+ Criar um modo dark/light com toggle
+
+📱 Responsividade
+ Usar media queries para ajustar layout no mobile
+
+ Tornar campos de input e botões mais amigáveis ao toque
+
+ Evitar que botões fiquem pequenos demais em telas pequenas
+
+📦 Melhorias de Funcionalidade
+ Ordenar tarefas (ex: por concluídas, por data)
+
+ Adicionar datas às tarefas (ex: criação, conclusão)
+
+ Permitir priorização (ex: 🔴 Alta | 🟡 Média | 🟢 Baixa)
+
+ Adicionar confirmação ao excluir
+
+ Permitir marcação de tarefas com tags ou categorias
+
+ Adicionar filtro de tarefas (ex: todas, concluídas, pendentes)
+
+☁️ Persistência e Sincronização
+ Armazenar dados no localStorage
+
+ Adicionar botão "Limpar tudo" com confirmação
+
+ Preparar para migrar do localStorage para IndexedDB ou backend no futuro
+
+🌍 Publicação e Portfólio
+ Criar favicon e título personalizados
+
+ Adicionar meta tags para SEO e redes sociais
+
+ Publicar no GitHub Pages / Vercel / Netlify
+
+ Adicionar esse projeto ao seu portfólio com uma descrição clara e o que você aprendeu
+
