@@ -23,7 +23,7 @@ DARK_MODE.addEventListener('click',()=>{
 tasks.forEach(task => {
   showTask(task.text, task.position);
   
-  document.addEventListener('keypress', function(e){
+  document.addEventListener('keydown', function(e){
     if(e.key == 'Enter' && document.activeElement === INPUT){
       ADD_BTN.click();
     }
