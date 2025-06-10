@@ -125,8 +125,8 @@ body{
     align-items: center;
     padding: 6px 10px;
 
-    width: 490px;
-    height: 35px;
+    max-width: 300px;
+    min-height: 100px;
 }
 
 #task-container{
@@ -136,7 +136,7 @@ body{
 .temp-input{
     background-color: transparent;
     border: none;
-    /* outline: none; */
+    outline: none;
     width: 420px;
     height: 30px;
     font: normal 14pt arial;
