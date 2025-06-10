@@ -18,12 +18,19 @@ body{
     border: solid 1px;
     border-radius: 5px;
 }
-
+#task-form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 490px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
 .task-text{
     background-color: transparent;
     border: none;
     outline: none;
-    width: 435px;
+    max-width: 400px;
     height: 30px;
     font: normal 14pt arial;
     text-align: center;
