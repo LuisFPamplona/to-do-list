@@ -12,7 +12,7 @@
     min-height:50px ;
 
     border: solid 1px;
-
+    border-radius: 5px;
 }
 
 .task-text{
@@ -81,47 +81,48 @@
 }
 
 .task{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6px 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  box-shadow: 0.5px 0.5px 5px;
-  border-radius: 4px;
-  transition: all 0.3s ease-in-out;
+    background-color: #beb3b3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0.5px 0.5px 5px;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
 }
 
 .buttonGroup {
-  display: flex;
-  flex-direction: column; /* Coloca os botões em coluna (vertical) */
-  margin-left: auto;      /* Empurra o grupo para o lado direito */
-  gap: 5px;               /* Espaçamento entre os botões */
+    display: flex;
+    flex-direction: column; /* Coloca os botões em coluna (vertical) */
+    margin-left: auto;      /* Empurra o grupo para o lado direito */
+    gap: 5px;               /* Espaçamento entre os botões */
 }
 
 .button-group button {
-  margin-left: 5px;
+    margin-left: 5px;
 }
 
 .tempDiv {
-  position: absolute;
-  /* top: 50%; */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  border: 2px solid black;
-  border-radius: 10px;
-  z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6px 10px;
-  
-  width: 490px;
-  height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 10px;
+
+    width: 490px;
+    height: 35px;
 }
 
 #task-container{
@@ -145,10 +146,39 @@
 }
 
 #overlay {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.3); /* semi-transparente */
-  backdrop-filter: blur(5px); /* efeito blur */
-  z-index: 999; /* acima do conteúdo normal */
-  display: none; /* começa escondido */
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* semi-transparente */
+    backdrop-filter: blur(5px); /* efeito blur */
+    z-index: 999; /* acima do conteúdo normal */
+    display: none; /* começa escondido */
+}
+
+
+.to-do-list{
+    margin: auto;
+    max-width: 510px;
+}
+
+#config-container{
+    margin: auto;
+    text-align: left;
+    max-width: 510px;
+}
+
+.mode {
+    background-color: transparent;
+    border: dashed 1px;
+    border-radius: 10px;
+
+    width: 30px;
+    height: 30px;
+
+    padding-right: 35px;
+    padding-bottom: 33px;
+
+    align-items: center;
+    font-size: 16pt;
+    margin-left: 4px;
+    margin-right: 4px;
 }

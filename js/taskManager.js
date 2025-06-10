@@ -51,14 +51,20 @@ export function editTask(id){
         let tempInput = createNewElement('temp-input', 'input', id, spanText)
         
         let tempButton = createNewElement('temp-button', 'button', id, '&#x2705',)
-
+        
         if(document.getElementById('tempDiv'+id) == null){
             taskDiv.appendChild(tempDiv)
             tempDiv.appendChild(tempInput)
             tempDiv.appendChild(tempButton)
         }
+        tempInput.focus();
 
         document.getElementById('temp-button'+id).addEventListener('click', defineText)
+        document.addEventListener('keypress', (e)=>{
+            if(e.key == 'Enter' && document.activeElement === tempInput){
+                tempButton.click();
+            }
+        })
 
         function defineText(){
             editedText = String(document.getElementById('temp-input'+id).value).trim();
@@ -84,24 +90,26 @@ export function editTask(id){
     }
 }
 
-export function doneTask(id){
+export function doneTask(id, mode){
     console.log('Done');
     
     let taskIndex = tasks.findIndex(task => task.position === id);
+    
     if (taskIndex !== -1) {
         
         let thisTask = document.querySelector('#task'+id);
             
         if(tasks[taskIndex].done == false){
+            tasks[taskIndex].done = true;
+            
             thisTask.style.backgroundColor = 'green';
             thisTask.style.color = 'white';
-            
-            tasks[taskIndex].done = true;
+                      
         } else if(tasks[taskIndex].done == true){
-            thisTask.style.backgroundColor = 'transparent';
-            thisTask.style.color = 'black';
-            
             tasks[taskIndex].done = false;
+
+            thisTask.style.backgroundColor = '#beb3b3';
+            thisTask.style.color = 'black';
         }
     }
 

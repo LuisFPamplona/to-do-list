@@ -1,5 +1,7 @@
 import {addTask, editTask, doneTask, deleteTask} from "./taskManager.js"
 
+let mode = 'light';
+
 export function createNewElement(name,type, id, value){
     switch (type) {
         case 'button':
@@ -52,14 +54,14 @@ export function showTask(text, id){
 
     let buttonGroup = createNewElement('buttonGroup', 'div')
 
-    let newDelete = createNewElement('delete', 'button', id, '&#x1F5D1');
+    let newDelete = createNewElement('delete', 'button', id, '&#x274C');
     newDelete.onclick = ()=>{deleteTask(id)};
 
     let newEdit = createNewElement('edit', 'button', id, '&#x270F');
     newEdit.onclick = ()=>{editTask(id)};
 
     let newDone = createNewElement('done', 'button', id, '&#x2705')    
-    newDone.onclick = ()=>{doneTask(id)};
+    newDone.onclick = ()=>{doneTask(id, mode)};
     
     buttonGroup.appendChild(newEdit);
     buttonGroup.appendChild(newDelete);
@@ -71,3 +73,33 @@ export function showTask(text, id){
     taskContainer.appendChild(newTask);
     
     }
+
+export function colorMode(colorMode){
+    let inputContainer = document.querySelector('.input-container');
+    let inputText = document.querySelector('.task-text');
+    let lightMode = document.querySelector('#light-mode');
+    let darkMode = document.querySelector('#dark-mode');
+
+    switch(colorMode){
+        case 'light' :
+            document.body.style.backgroundColor = 'white';
+            inputContainer.style.borderColor = 'black'
+            lightMode.style.borderColor = 'black'
+            darkMode.style.borderColor = 'black'
+            inputText.style.color = 'black'
+            document.querySelectorAll('.task').forEach(task=>task.style.boxShadow = '0.5px 0.5px 5px black');
+
+            mode = 'light';
+            break;
+        case 'dark':
+            document.body.style.backgroundColor = 'black';
+            inputContainer.style.borderColor = 'white'
+            lightMode.style.borderColor = 'white'
+            darkMode.style.borderColor = 'white'
+            inputText.style.color = 'white'
+            document.querySelectorAll('.task').forEach(task=>task.style.boxShadow = '0.5px 0.5px 5px white');
+
+            mode = 'dark';
+            break;
+    }
+}
