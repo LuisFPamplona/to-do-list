@@ -87,7 +87,6 @@ export function colorMode(colorMode){
             lightMode.style.borderColor = 'black'
             darkMode.style.borderColor = 'black'
             inputText.style.color = 'black'
-            document.querySelectorAll('.task').forEach(task=>task.style.boxShadow = '0.5px 0.5px 5px black');
 
             mode = 'light';
             break;
@@ -97,7 +96,6 @@ export function colorMode(colorMode){
             lightMode.style.borderColor = 'white'
             darkMode.style.borderColor = 'white'
             inputText.style.color = 'white'
-            document.querySelectorAll('.task').forEach(task=>task.style.boxShadow = '0.5px 0.5px 5px white');
 
             mode = 'dark';
             break;

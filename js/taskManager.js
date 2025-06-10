@@ -90,7 +90,7 @@ export function editTask(id){
     }
 }
 
-export function doneTask(id, mode){
+export function doneTask(id){
     console.log('Done');
     
     let taskIndex = tasks.findIndex(task => task.position === id);
