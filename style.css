@@ -136,17 +136,24 @@ body{
 .temp-input{
     background-color: transparent;
     border: none;
-    outline: none;
-    width: 420px;
+    /* outline: none; */
+    width: 200px;
     height: 30px;
     font: normal 14pt arial;
     text-align: left;
+    padding-top: 10px;
+}
+
+.temp-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .temp-button{
     background-color: transparent;
     border: none;
     font-size: 20pt;
+    padding-top: 5px;
 }
 
 #overlay {

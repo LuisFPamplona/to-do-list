@@ -51,19 +51,21 @@ export function editTask(id){
         let tempInput = createNewElement('temp-input', 'input', id, spanText)
         
         let tempButton = createNewElement('temp-button', 'button', id, '&#x2705',)
+
+        let tempForm = createNewElement('temp-form', 'form', id);
         
         if(document.getElementById('tempDiv'+id) == null){
             taskDiv.appendChild(tempDiv)
-            tempDiv.appendChild(tempInput)
-            tempDiv.appendChild(tempButton)
+            tempDiv.appendChild(tempForm)
+            tempForm.appendChild(tempInput)
+            tempForm.appendChild(tempButton)
         }
         tempInput.focus();
 
-        document.getElementById('temp-button'+id).addEventListener('click', defineText)
-        document.addEventListener('keypress', (e)=>{
-            if(e.key == 'Enter' && document.activeElement === tempInput){
-                tempButton.click();
-            }
+        let TEMP_FORM = document.querySelector('#temp-form'+id);
+        TEMP_FORM.addEventListener('submit', (e)=>{
+            e.preventDefault();
+            defineText();
         })
 
         function defineText(){

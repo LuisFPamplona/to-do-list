@@ -1,10 +1,10 @@
 import {showTask} from "./ui.js";
 import {addTask} from "./taskManager.js"
-import { colorMode } from "./ui.js";
+import {colorMode} from "./ui.js";
 
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-const ADD_BTN = document.querySelector('#add-task');
+const FORM = document.querySelector('#task-form');
 
 const INPUT = document.querySelector('#task');
 INPUT.focus()
@@ -12,7 +12,11 @@ INPUT.focus()
 const LIGHT_MODE = document.getElementById('light-mode');
 const DARK_MODE = document.getElementById('dark-mode');
 
-ADD_BTN.addEventListener('click', addTask);
+FORM.addEventListener('submit', (e)=>{
+  e.preventDefault();
+  addTask();
+})
+
 LIGHT_MODE.addEventListener('click',()=>{
   colorMode('light');
 })
@@ -22,12 +26,6 @@ DARK_MODE.addEventListener('click',()=>{
 
 tasks.forEach(task => {
   showTask(task.text, task.position);
-  
-  document.addEventListener('keydown', function(e){
-    if(e.key == 'Enter' && document.activeElement === INPUT){
-      ADD_BTN.click();
-    }
-  })
 
   if (task.done) {
     let taskDiv = document.getElementById('task' + task.position);

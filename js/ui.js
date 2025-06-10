@@ -9,9 +9,10 @@ export function createNewElement(name,type, id, value){
             newButton.id = name+id;
             newButton.className = name;
             newButton.innerHTML = value;
+            newButton.type = 'submit';
         
             return newButton;
-        break;
+            break;
 
         case 'input':
             let newInput = document.createElement(type);
@@ -20,7 +21,7 @@ export function createNewElement(name,type, id, value){
             newInput.value = value;
 
             return newInput;
-        break;
+            break;
     
         case 'span':
             let newSpan = document.createElement('span');
@@ -29,7 +30,7 @@ export function createNewElement(name,type, id, value){
             newSpan.className = name;
             
             return newSpan;
-        break;
+            break;
 
         case ('div'):
             let newDiv = document.createElement('div');
@@ -37,7 +38,15 @@ export function createNewElement(name,type, id, value){
             newDiv.className = name;
 
             return newDiv;
-        break;
+            break;
+
+        case ('form'):
+            let newForm = document.createElement('form');
+            newForm.id = name+id;
+            newForm.className = name;
+
+            return newForm;
+            break;
         
         default:
             console.log('type doesnt exist')
