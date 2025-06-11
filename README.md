@@ -4,8 +4,8 @@ Este é um projeto de lista de tarefas interativa, desenvolvido com **HTML, CSS 
 
 ## Preview
 
-![to-do-preview-lightmode](to-do-preview/lightmode.png)
-![to-do-preview-darkmode](to-do-preview/darkmode.png)
+![to-do-preview-lightmode](to-do-preview/lightmode300.png)
+![to-do-preview-darkmode](to-do-preview/darkmode300.png)
 
 
 ## Funcionalidades
