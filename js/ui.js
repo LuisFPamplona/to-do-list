@@ -1,4 +1,7 @@
 import {addTask, editTask, doneTask, deleteTask} from "./taskManager.js"
+import { getTasks, setTasks } from "./storage.js";
+
+let tasks = getTasks();
 
 let mode = 'light';
 
@@ -36,6 +39,7 @@ export function createNewElement(name,type, id, value){
             let newDiv = document.createElement('div');
             newDiv.id = name+id;
             newDiv.className = name;
+            newDiv.setAttribute('draggable', 'true');
 
             return newDiv;
             break;
@@ -54,10 +58,55 @@ export function createNewElement(name,type, id, value){
     }
 }
 
+function changeOrder(id1, id2){
+
+    const index1 = tasks.findIndex(t=>t.position === id1)
+
+    const index2 = tasks.findIndex(t=>t.position === id2)
+
+    if(index1 === -1 || index2 === -1 || index1 === index2){
+        return;
+    }
+
+    const [task] = tasks.splice(index1, 1); 
+    tasks.splice(index2, 0, task)
+
+    setTasks(tasks);
+    renderTasks();
+}
+
+function renderTasks(){
+    const container = document.querySelector('#task-container');
+    container.innerHTML = '';
+
+    tasks.forEach(task => {
+      showTask(task.text, task.position);
+    
+      if (task.done) {
+        let taskDiv = document.getElementById('task' + task.position);
+        taskDiv.style.backgroundColor = 'green';
+        taskDiv.style.color = 'white';
+      }
+    });
+}
+
 export function showTask(text, id){ 
     let taskContainer = document.querySelector('#task-container');
 
     let newTask = createNewElement('task', 'div', id)
+    newTask.addEventListener('dragstart', (e)=>{
+                e.dataTransfer.setData('text/plain', id.toString());
+            });
+    newTask.addEventListener('dragover', (e)=>{
+        e.preventDefault();
+    });
+    newTask.addEventListener('drop', (e)=>{
+        e.preventDefault();
+        const draggedId = e.dataTransfer.getData('text/plain');
+        const targetId = id.toString();
+
+        changeOrder(Number(draggedId), Number(targetId));
+    });
 
     let taskText = createNewElement('span', 'span', id, text)
 
