@@ -29,7 +29,7 @@ tasks.forEach(task => {
 
   if (task.done) {
     let taskDiv = document.getElementById('task' + task.position);
-    taskDiv.style.backgroundColor = 'green';
+    taskDiv.style.backgroundColor = '#6aa358';
     taskDiv.style.color = 'white';
   }
 });
