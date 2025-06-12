@@ -263,17 +263,6 @@ footer {
     color: #1b1b1b;
 }
 
-footer a img {
-    max-width: 32px;
-    height: auto;
-    object-fit: contain;
-}
-.icon{
-    max-width: 32px;
-    height: auto;
-    object-fit: contain;
-}
-
 footer p {
     font: bold 8pt Arial;
 }
