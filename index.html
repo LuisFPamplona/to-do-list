@@ -7,32 +7,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div class="to-do-list">
+    <main>
+            <div class="to-do-list">
         
-        <div id="config-container">
-            <button id="dark-mode" class="mode">&#x1F311</button>
-            <button id="light-mode" class="mode">&#x1F31E </button>
-        </div>
+                <div id="config-container">
+                    <button id="dark-mode" class="mode">&#x1F311</button>
+                    <button id="light-mode" class="mode">&#x1F31E </button>
+                </div>
         
-        <div id="input-container" class="input-container">
-            <form id="task-form">
-                <input type="text"  id="task" class="task-text" placeholder="Digite uma nova tarefa">
-                <button id="add-task" type="submit">&#x2795</button>
-            </form>
-        </div>
+                <div id="input-container" class="input-container">
+                    <form id="task-form">
+                        <input type="text"  id="task" class="task-text" placeholder="Digite uma nova tarefa">
+                        <button id="add-task" type="submit">&#x2795</button>
+                    </form>
+                </div>
         
         
-        <div id="task-container" class="task-container">
+                <div id="task-container" class="task-container">
+        
+                </div>
+            </div>
+        
+            <div id="overlay"></div>
 
-        </div>
-    </div>
-
-    <div id="overlay"></div>
-
-    <footer>
-        <a href="https://github.com/LuisFPamplona">https://github.com/LuisFPamplona</a>
-    </footer>
+            <footer>
+                <div class="socialmedia">
+                    <a href="https://github.com/LuisFPamplona">
+                    <img src="./img/header/github-mark.png" alt="github logo">
+                    </a>
+                    
+                </div>
+                <div class="socialmedia">
+                    <a href="https://linkedin.com/in/luis-pamplona-552030310">
+                    <img src="./img/header/LI-In-Bug.png" alt="linkedin logo">
+                    </a>
+                </div>
+                <div>
+                    <p>LuisFPamplona&copy</p>
+                </div>
+            </footer>
+    </main>
     
     <script type="module" src="js/main.js"></script>
 </body>

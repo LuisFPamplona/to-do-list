@@ -1,22 +1,7 @@
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
-body{
-    transition: all 0.6s ease-in-out;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #777;
-}
-footer a {
-  color: #555;
-  text-decoration: none;
-}
-footer a:hover {
-  text-decoration: underline;
 }
 
 .to-do-list{
@@ -32,6 +17,7 @@ footer a:hover {
 
 #config-container{
     margin: auto;
+    margin-top: 15px;
     text-align: left;
     max-width: 90%;
 }
@@ -242,6 +228,51 @@ footer a:hover {
     z-index: 999; /* acima do conteúdo normal */
     display: none; /* começa escondido */
 }
+
+/* FOOTER ---------------------------------------- */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #dededd;
+    
+    width: 100%;
+    height: 70px;
+
+    text-align: center;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.socialmedia{
+    width: 50px;
+    height: 32px;
+
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    
+}
+
+.socialmedia a {
+    text-decoration: none;
+    color: #1b1b1b;
+}
+
+footer a img {
+    max-width: 32px;
+    height: auto;
+    object-fit: contain;
+}
+
+footer p {
+    font: bold 8pt Arial;
+}
+
 
 /* ANIMACOES-------------------------------- */
 

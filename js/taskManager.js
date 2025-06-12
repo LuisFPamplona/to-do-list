@@ -113,7 +113,7 @@ export function doneTask(id){
         if(tasks[taskIndex].done == false){
             tasks[taskIndex].done = true;
             
-            thisTask.style.backgroundColor = 'green';
+            thisTask.style.backgroundColor = '#6aa358';
             thisTask.style.color = 'white';
                       
         } else if(tasks[taskIndex].done == true){
