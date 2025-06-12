@@ -22,11 +22,11 @@ Este é um projeto de lista de tarefas interativa, desenvolvido com **HTML, CSS 
 
 - Manipulação de DOM com JavaScript
 - Estruturação dinâmica de elementos HTML
-- Eventos (`click`, `dragstart`, `drop`, etc.)
+- Eventos (click, dragstart, drop, etc.)
 - Condicionais e funções reutilizáveis
-- `localStorage` para persistência de dados
-- Organização de código em módulos JS (`import/export`)
-- Princípios como **DRY (Don't Repeat Yourself)**
+- localStorage para persistência de dados
+- Organização de código em módulos JS (import/export)
+- Princípios como DRY (Don't Repeat Yourself)
 
 
 ## Aprendizado
