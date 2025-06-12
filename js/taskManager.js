@@ -38,7 +38,11 @@ export function editTask(id){
 
     let taskIndex = tasks.findIndex(task => task.position === id);
     if (taskIndex !== -1) {
+
         let editedText;
+
+        let todolist = document.querySelector('.to-do-list');
+
         let spanText = document.getElementById('span'+id).textContent;
 
         let overlay = document.getElementById('overlay');
@@ -55,7 +59,7 @@ export function editTask(id){
         let tempForm = createNewElement('temp-form', 'form', id);
         
         if(document.getElementById('tempDiv'+id) == null){
-            taskDiv.appendChild(tempDiv)
+            todolist.appendChild(tempDiv)
             tempDiv.appendChild(tempForm)
             tempForm.appendChild(tempInput)
             tempForm.appendChild(tempButton)
@@ -66,6 +70,11 @@ export function editTask(id){
         TEMP_FORM.addEventListener('submit', (e)=>{
             e.preventDefault();
             defineText();
+        })
+
+        overlay.addEventListener('click', (e)=>{
+            todolist.removeChild(tempDiv);
+            overlay.style.display = 'none';
         })
 
         function defineText(){
@@ -82,7 +91,7 @@ export function editTask(id){
                 span.textContent = editedText;
             }
 
-            taskDiv.removeChild(tempDiv);
+            todolist.removeChild(tempDiv);
             overlay.style.display = 'none';
         }
             

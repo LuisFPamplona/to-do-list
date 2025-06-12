@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body{
     transition: all 0.6s ease-in-out;
 }
@@ -17,8 +20,12 @@ footer a:hover {
 }
 
 .to-do-list{
+    position: relative;
+
     margin: auto;
     max-width: 510px;
+
+    /* border: solid 1px; */
 }
 
 /* BOTOES DE CONFIGURAÇAO------------------------ */
@@ -26,7 +33,7 @@ footer a:hover {
 #config-container{
     margin: auto;
     text-align: left;
-    max-width: 510px;
+    max-width: 90%;
 }
 
 .mode {
@@ -59,7 +66,7 @@ footer a:hover {
 
     margin-top: 15px;
 
-    max-width: 500px;
+    max-width: 90%;
     min-height:50px ;
 
     border: solid 1px;
@@ -176,12 +183,12 @@ footer a:hover {
 /* INICIO DIV TEMPORARIA DO BOTAO DE EDICAO---------------------------- */
 .tempDiv {
     position: absolute;
+
+    top: 12%;
     left: 50%;
     transform: translate(-50%, -50%);
 
     background-color: white;
-
-    padding: 20px;
     
     border: 2px solid black;
     border-radius: 10px;
@@ -191,9 +198,9 @@ footer a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6px 10px;
+    /* padding: 6px 10px; */
 
-    width: 70%;
+    width: 90%;
     min-height: 60px;
 }
 
